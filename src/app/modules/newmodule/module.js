@@ -8,9 +8,9 @@
   /** @ngInject */
   function routeConfig($stateProvider) {
     $stateProvider
-      .state('demo', {
-        url: '/demo',
-        templateUrl: 'app/modules/demo/index.html'
+      .state('newmodule', {   //更改demo为newmodule
+        url: '/newmodule',      //更改demo为newmodule 这个url将
+        templateUrl: 'app/modules/newmodule/index.html' //指向我们的view
       });
   }
 })();
