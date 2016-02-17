@@ -1,2 +1,27 @@
-
-<div class="row">This is {{viewModel.customVariable}}</div>
+<div class="page-header">
+  <h1>Order List <small>this is demo page</small></h1>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-bordered text-center">
+      <thead>
+      <tr>
+        <th class="text-center">Name</th>
+        <th class="text-center">Province</th>
+        <th class="text-center">Price</th>
+        <th class="text-center">Count</th>
+        <th class="text-center">Sum</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="order in viewModel.orders">
+        <td>{{order.buyer}}</td>
+        <td>{{order.province}}</td>
+        <td>{{order.price}}</td>
+        <td>{{order.count}}</td>
+        <td>{{order.price * order.count}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

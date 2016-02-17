@@ -1,22 +1,19 @@
-/**
- * Created by dev on 15-7-17.
- */
 (function () {
   'use strict';
 
   angular
     .module('demoui')
-    .factory('demoRepo', demoRepo);
+    .factory('newModuleRepo', newModuleRepo);
 
   /** @ngInject */
-  function demoRepo() {
+  function newModuleRepo($http) {
     return {
       all: function (callback) {
-        callback([{
-
-        }]);
-
+        $http.get("http://localhost:9898/orders").success(function(data){
+          callback(data);
+        });
       }
     };
-  }})();
+  }
+})();
 
